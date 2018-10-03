@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from '../components/Home';
+import EmailDashboard from '../components/EmailDashboard';
 import NotFoundPage from '../components/NotFoundPage';
 
 const AppRouter = () => (
@@ -9,7 +9,7 @@ const AppRouter = () => (
       <Switch>
         <Route
           path="/"
-          component={Home}
+          component={EmailDashboard}
           exact={true}
         />
         <Route
