@@ -15,8 +15,10 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="search-bar">
+        <span className="fa fa-search search-bar__icon"></span>
         <input
+          className="search-bar__input"
           type="text"
           placeholder="Search Email"
           value={this.props.filters.text}

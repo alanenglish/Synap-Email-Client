@@ -17,7 +17,7 @@ class Inbox extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="inbox">
         {this.props.emails.length ? (
           <ul className="list-group">{this.displayInboxItems()}</ul>
           ) : (

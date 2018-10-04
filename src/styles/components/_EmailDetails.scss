@@ -1,0 +1,16 @@
+.email-details {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  overflow-y: scroll;
+  width: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .email-details {
+        height: 30vh;
+    }
+}

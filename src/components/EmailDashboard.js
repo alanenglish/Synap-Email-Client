@@ -1,13 +1,19 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import Inbox from './Inbox';
-import SenderDetails from './SenderDetails';
+import EmailDetails from './EmailDetails';
 
 const EmailDashboard = () => (
   <div>
     <SearchBar />
-    <SenderDetails />
-    <Inbox />
+    <div className="row">
+      <div className="col-lg-4 col-md-5 col-sm-12">
+        <EmailDetails />
+      </div>
+      <div className="col-lg-8 col-md-7 col-sm-12">
+        <Inbox />
+      </div>
+    </div>
   </div>
 );
 

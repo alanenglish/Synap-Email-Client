@@ -30,11 +30,11 @@ class InboxItem extends React.Component {
     const { subject, body, id } = this.props.email;
     return (
       <li
-        className={classnames("list-group-item", {"active-email": this.props.activeEmail.id === id })}
+        className={classnames("list-group-item email", {"active-email": this.props.activeEmail.id === id })}
         onClick={this.onInboxItemClick}
       >
-        <h4>{subject}</h4>
-        <p>{body}</p>
+        <h4 className="email__subject">{subject}</h4>
+        <p className="email__body">{body}</p>
       </li>
     );
   }
