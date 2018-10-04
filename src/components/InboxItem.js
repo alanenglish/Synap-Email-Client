@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { startSetFocusedSender } from '../actions/sender';
@@ -6,8 +7,20 @@ import { startSetFocusedRecipient } from '../actions/recipient';
 import { setActiveEmail } from '../actions/active';
 
 class InboxItem extends React.Component {
+  static propTypes = {
+    activeEmail: PropTypes.any,
+    email: PropTypes.object.isRequired,
+    startSetFocusedSender: PropTypes.func.isRequired,
+    startSetFocusedRecipient: PropTypes.func.isRequired,
+    setActiveEmail: PropTypes.func.isRequired
+  };
+
+  static defaultProps = {
+    activeEmail: ''
+  }
+
   onInboxItemClick = () => {
-    const { to, from, id } = this.props.email;
+    const { to, from } = this.props.email;
     this.props.startSetFocusedSender(from);
     this.props.startSetFocusedRecipient(to);
     this.props.setActiveEmail(this.props.email);

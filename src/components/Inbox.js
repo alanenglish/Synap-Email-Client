@@ -1,13 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import InboxItem from './InboxItem';
+import selectEmails from '../selectors/emails';
 
 class Inbox extends React.Component {
+  static propTypes = {
+    emails: PropTypes.array.isRequired
+  };
+
   displayInboxItems = () => {
     return this.props.emails.map((email) => (
       <InboxItem key={email.id} email={email} />
     ));
-  }
+  };
 
   render() {
     return (
@@ -25,7 +31,7 @@ class Inbox extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    emails: state.emails
+    emails: selectEmails(state.emails, state.filters)
   };
 };
 
