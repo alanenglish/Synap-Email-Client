@@ -1,9 +1,44 @@
 import React from 'react';
+import classnames from 'classnames';
+import { connect } from 'react-redux';
+import { startSetFocusedSender } from '../actions/sender';
+import { startSetFocusedRecipient } from '../actions/recipient';
+import { setActiveEmail } from '../actions/active';
 
-const InboxItem = () => (
-  <div>
-    Each inbox item will be created here.
-  </div>
-);
+class InboxItem extends React.Component {
+  onInboxItemClick = () => {
+    const { to, from, id } = this.props.email;
+    this.props.startSetFocusedSender(from);
+    this.props.startSetFocusedRecipient(to);
+    this.props.setActiveEmail(this.props.email);
+  };
 
-export default InboxItem;
+  render() {
+    const { subject, body, id } = this.props.email;
+    return (
+      <li
+        className={classnames("list-group-item", {"active-email": this.props.activeEmail.id === id })}
+        onClick={this.onInboxItemClick}
+      >
+        <h4>{subject}</h4>
+        <p>{body}</p>
+      </li>
+    );
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    activeEmail: state.activeEmail
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    startSetFocusedSender: (emailAddress) => dispatch(startSetFocusedSender(emailAddress)),
+    startSetFocusedRecipient: (emailAddress) => dispatch(startSetFocusedRecipient(emailAddress)),
+    setActiveEmail: (email) => dispatch(setActiveEmail(email))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(InboxItem);

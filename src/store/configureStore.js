@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import emailsReducer from '../reducers/emails';
 import senderReducer from '../reducers/sender';
 import recipientReducer from '../reducers/recipient';
+import activeReducer from '../reducers/active';
 
 // REDUX DEV TOOLS
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -13,7 +14,8 @@ export default () => {
     combineReducers({
       emails: emailsReducer,
       sender: senderReducer,
-      recipient: recipientReducer
+      recipient: recipientReducer,
+      activeEmail: activeReducer
     }),
     composeEnhancers(applyMiddleware(thunk))
   );

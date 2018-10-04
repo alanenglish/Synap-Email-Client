@@ -13,7 +13,6 @@ import 'react-dates/lib/css/_datepicker.css'; // css for react dates calendar
 const store = configureStore();
 
 store.dispatch(startSetEmails());
-
 store.dispatch(startSetFocusedSender('white_jackson@ziemann.com'));
 store.dispatch(startSetFocusedRecipient('aileen.klocko@binspfannerstill.net'));
 
