@@ -1,3 +1,34 @@
-.sender {
-  
+.recipient {
+  text-align: center;
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+}
+
+.recipient__from {
+  font-family: 'Bangers', cursive;
+  text-transform: uppercase;
+  font-size: 170%
+}
+
+.recipient__name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 120%;
+  margin-bottom: 3px;
+}
+
+.recipient__email {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #9C9C9C
+}
+
+.recipient__image {
+  background: black;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid #9F9F9F;
 }

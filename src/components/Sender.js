@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import SenderOrRecipient from './SenderOrRecipient';
 
 const Sender = ({ sender }) => (
-  <div className="sender">
-    <h4>{sender.name && sender.name}</h4>
-    {/* <img src={sender.avatar} /> */}
+  <div className="details-line-break">
+    <SenderOrRecipient person={sender} message="Message From:" insertClass="sender" />
   </div>
 );
 
@@ -20,7 +20,7 @@ Sender.propTypes = {
 };
 
 Sender.defaultProps = {
-  sender: null
+  sender: ''
 };
 
 export default connect(mapStateToProps)(Sender);

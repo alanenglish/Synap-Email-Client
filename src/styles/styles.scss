@@ -1,6 +1,9 @@
 @import './base/settings';
 @import './base/base';
+@import './components/EmailDashboard';
 @import './components/SearchBar';
 @import './components/Inbox';
-@import './components/EmailDetails';
 @import './components/InboxItem';
+@import './components/EmailDetails';
+@import './components/SenderOrRecipient';
+@import './components/Loading';

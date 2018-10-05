@@ -7,11 +7,13 @@
 }
 
 .email__subject {
+  font-family: 'Oswald', sans-serif;
   font-size: 100%;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .email__body {
-  font-size: 75%;
+  font-size: 100%;
+  font-family: 'PT Sans Narrow', sans-serif;
 }

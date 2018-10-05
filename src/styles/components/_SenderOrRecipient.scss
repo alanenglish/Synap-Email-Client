@@ -1,0 +1,53 @@
+.sender, .recipient {
+  text-align: center;
+  width: auto;
+  height: auto;
+  &.sender {
+    margin-bottom: 15px;
+    border-bottom: 2px solid black;
+  }
+}
+
+.sender-recipient__from-to {
+  font-family: 'Bangers', cursive;
+  text-transform: uppercase;
+  font-size: 170%
+}
+
+.sender-recipient__name, .sender-recipient__company-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 120%;
+  margin-bottom: 3px;
+  &.sender-recipient__company-name {
+    display: inline-block;
+    margin-right: 7px;
+    text-decoration: underline;
+  }
+}
+
+.sender-recipient__email-description {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #9C9C9C;
+  margin-bottom: 3px;
+}
+
+.sender-recipient__image {
+  background: black;
+  display: inline-block;
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 1px solid #9F9F9F;
+}
+
+.sender-recipient__company-logo {
+  height: auto;
+  width: 80px;
+  display: inline-block;
+}
+
+.details-line-break {
+  width: 100%;
+}
