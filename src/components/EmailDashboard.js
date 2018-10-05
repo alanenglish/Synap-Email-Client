@@ -6,7 +6,7 @@ import EmailDetails from './EmailDetails';
 const EmailDashboard = () => (
   <div>
     <SearchBar />
-    <div className="row">
+    <div className="row main-content">
       <div className="col-lg-4 col-md-5 col-sm-12 left-col">
         <EmailDetails />
       </div>

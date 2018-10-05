@@ -10,7 +10,7 @@ const SenderOrRecipient = ({ person, message, insertClass }) => (
         <h4 className="sender-recipient__name">{person.name}</h4>
         <p className="sender-recipient__email-description">"{person.email}"</p>
         {person.company && (
-          <div className="text-center">
+          <div className="sender-recipient__company-container">
             <h4 className="sender-recipient__company-name">{person.company.name}</h4>
             <img className="sender-recipient__company-logo" src={person.company.logo} />
             <h4 className="sender-recipient__email-description">{person.company.description}</h4>

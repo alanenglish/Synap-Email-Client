@@ -23,13 +23,10 @@ class Inbox extends React.Component {
 
   render() {
     const { error } = this.props;
+    if (error) toast.error(`Oops! ${error} - Please try again by refreshing the page!`);
     return (
       <div className="inbox">
-        {error ? toast.error(`Oops! ${error} - Please try again by refreshing the page!`) :
-          (
-            <ul className="list-group">{this.displayInboxItems()}</ul>
-          )
-        }
+        {!error && <ul className="list-group">{this.displayInboxItems()}</ul>}
       </div>
     );
   }

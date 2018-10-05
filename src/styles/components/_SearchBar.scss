@@ -23,3 +23,10 @@
   font-size: 120%;
   color: white;
 }
+
+@media only screen and (max-width: 767px) {
+    /* For mobile phones: */
+    .search-bar__input {
+      width: 80%;
+    }
+}
