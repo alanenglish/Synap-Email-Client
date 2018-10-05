@@ -1,7 +1,8 @@
 # Web Client
 
-## Run Application
-Quick run the application with command `yard run dev-server`
+## Instructions to Run Application
+
+Quickly run the application with command `yarn run dev-server`
 
 Or
 
