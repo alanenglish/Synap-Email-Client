@@ -14,7 +14,7 @@ export const setErrors = (error) => ({
 
 export const startSetEmails = () => {
   return (dispatch) => {
-    return axios.get('https://morning-falls-3769.herokuapp.com/api/messages').then((response) => {
+    return axios.get('https://morning-falls-3769.herokuapp.com/api/messages?start=0&count=200').then((response) => {
       dispatch(setEmails(response.data));
     }).catch((error) => {
       dispatch(setErrors(error.response.data.error));

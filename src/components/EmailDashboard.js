@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar';
-import Inbox from './Inbox';
+// import Inbox from './Inbox';
+import InfiniteScrollInbox from './InfiniteScrollInbox';
 import EmailDetails from './EmailDetails';
 
 const EmailDashboard = () => (
@@ -11,7 +12,8 @@ const EmailDashboard = () => (
         <EmailDetails />
       </div>
       <div className="col-lg-8 col-md-7 col-sm-12 right-col">
-        <Inbox />
+        {/* <Inbox /> */}
+        <InfiniteScrollInbox />
       </div>
     </div>
   </div>
