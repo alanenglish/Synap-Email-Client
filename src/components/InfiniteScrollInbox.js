@@ -39,7 +39,9 @@ class InfiniteScrollInbox extends React.Component {
     const emailItems = [];
     const { emails } = this.props;
     for (let i = 0; i < this.state.items; i++) {
-      emailItems.push(<InboxItem key={emails[i].id} email={emails[i]} />);
+      if (emails[i]) {
+        emailItems.push(<InboxItem key={emails[i].id} email={emails[i]} />);
+      }
     }
     return emailItems;
   };
